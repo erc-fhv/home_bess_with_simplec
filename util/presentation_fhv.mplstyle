@@ -1,0 +1,114 @@
+# Matplotlib style für die Latex Masterarbeitsvorlage der FHV 
+# in Anlehnung an "SciencePlots"
+# https://github.com/garrettj403/SciencePlots
+# 
+# Diese Datei in das Code Verzeichnis legen
+# Im Code folgende Zeile einfügen:
+# plt.style.use('presentation_fhv.mplstyle')
+
+##################################################
+# Hier schriftart und Größe aus Dokument anpassen:
+##################################################
+font.size        : 16  # 24  # 18      
+font.family      : sans-serif  
+font.sans-serif  : Calibri, Arial, DejaVu Sans, Bitstream Vera Sans, Computer Modern Sans Serif, Lucida Grande, Verdana, Geneva, Lucid, Helvetica, Avant Garde, sans-serif
+# mathtext.fontset : cm # (cm = Computer Modern wie oben)
+
+# Alternative Schriftarten:
+# font.serif  : Computer Modern Roman, DejaVu Serif, Bitstream Vera Serif, New Century Schoolbook, Century Schoolbook L, Utopia, ITC Bookman, Bookman, Nimbus Roman No9 L, Times New Roman, Times, Palatino, Charter, serif
+# font.cursive:    Apple Chancery, Textile, Zapf Chancery, Sand, Script MT, Felipa, Comic Neue, Comic Sans MS, cursive
+# font.fantasy:    Chicago, Charcoal, Impact, Western, Humor Sans, xkcd, fantasy
+# font.monospace:  DejaVu Sans Mono, Bitstream Vera Sans Mono, Computer Modern Typewriter, Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, Terminal, monospace
+
+# relative Schriftgrößen (medium entspricht font.size wie oben festgelegt)
+axes.titlesize :     medium  # font size of the axes title
+xtick.labelsize:     medium # small   # font size of the tick labe
+ytick.labelsize:     medium # small   # font size of the tick labels
+legend.fontsize:     medium # small
+axes.labelsize :     medium
+
+#########################################################
+# Latex zum rendern des Textes in den Abbildungen verwenden?
+#########################################################
+# Der Text wird von Latex schöner gerendert, allerdings muss dazu eine funktionierende Latex # installation auf dem Rechner vorhanden sein, die on Maplotlib aufgerufen werden kann
+text.usetex         :  False  # True
+# text.latex.preamble :  \usepackage{amsmath} \usepackage{amssymb}
+
+
+#########################################################
+# Anpassung der Größe der Abbildungen
+#########################################################
+# Größe der Figure enspricht Größe des textfeldes
+# figure.figsize : 9.220, 4.382 
+figure.figsize : 12.46063, 5.0984252 # full width
+
+# Constrained Layout, anderenfalls stimmen die Größen nicht überein
+figure.constrained_layout.use : True
+savefig.pad_inches            : 0.02  # Sonst werden Linien abgeschnitten
+figure.dpi                    : 1000  # Qualität der Abbildung (1000 für finale Arbeit gut)
+
+#########################################################
+# Anpassung der Farben für Corporate Design
+#########################################################
+# Set color cycle: light blue, lavender, light yellow, red
+axes.prop_cycle : cycler('color', ['9ACFF1', 'C0A1CC', 'FFDC5F', 'ED6E4C'])
+
+#########################################################
+# Anpassung der Axen für wissenschaftlicheres Aussehen
+#########################################################
+# Set x axis
+xtick.direction : out
+xtick.major.size : 3
+xtick.major.width : 1 # 0.5
+xtick.minor.size : 1.5
+xtick.minor.width : 0.5
+xtick.minor.visible : False # True
+xtick.top : False # True
+
+# Set y axis
+ytick.direction : out
+ytick.major.size : 3
+ytick.major.width : 1 # 0.5
+ytick.minor.size : 1.5
+ytick.minor.width : 0.5
+ytick.minor.visible : False # True
+ytick.right : False # True
+
+# Set Grid
+# axes.grid:          False # True   # display grid or not
+# axes.grid.axis:     both    # which axis the grid should apply to
+# axes.grid.which:    major   # grid lines at {major, minor, both} ticks
+# grid.color:     b0b0b0  # grid color
+grid.linestyle: :       # 
+# grid.alpha:     1.0     # transparency, between 0.0 and 1.0
+
+# Set line widths
+axes.linewidth :  1 # 0.5
+grid.linewidth :  1 # 0.5 # 0.5
+lines.linewidth : 1.5
+
+# Remove legend frame
+legend.frameon : False
+
+axes.spines.left  : True 
+axes.spines.bottom: True
+axes.spines.top   : True
+axes.spines.right : True
+
+#########################################################
+# Anpassen wie Matplotlib die Axen skaliert 
+#########################################################
+axes.formatter.limits: -2, 3  # use scientific notation if log10
+                              # of the axis range is smaller than the
+                              # first or larger than the second
+
+axes.formatter.use_mathtext: True  # When True, use mathtext for scientific
+                                    # notation.
+
+axes.formatter.min_exponent: 2  # minimum exponent to format in scientific notation
+axes.formatter.useoffset: False  # If True, the tick label formatter
+                                 # will default to labeling ticks relative
+                                 # to an offset when the data range is
+                                 # small compared to the minimum absolute
+                                 # value of the data.
+

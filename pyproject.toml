@@ -1,0 +1,43 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "FlECs-Framework"
+version = "0.1.0"
+description = "Model library and Scripting Framework for Energy System Models"
+requires-python = ">=3.11"
+
+dependencies = [
+    "coolprop",
+    "highspy",
+    "ipython",
+    "matplotlib",
+    "networkx",
+    "numpy",
+    "pandas",
+    "plotly",
+    "pvlib",
+    "pyloadprofilegenerator @ git+https://github.com/valentinseiler/pylpg.git@improve_usability",
+    "pyomo",
+    "pytest",
+    "pytest-cov",
+    "scipy",
+    "simplec @ git+https://github.com/erc-fhv/SimPlEC@v1.2.2",
+    "snakeviz",
+    "dash",
+    "dash-bootstrap-components",
+    "dash-cytoscape",
+    "pyarrow",
+    "fastparquet",
+    "entsoe-py",
+    "ipykernel",
+    "loadforecasting-models",
+    "pulp",
+    "highspy"
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["*"]
+exclude = ["tests*", "venv*", ".venv*"]
