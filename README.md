@@ -1,10 +1,9 @@
-# Home BESS Simulation with the SimPlEC Framework
 
-## Overview
+# Overview
 
 This repository contains the code for the co-simulation of a residential energy system consisting of a battery energy storage system (BESS) and a photovoltaic (PV) system. The simulation is built on top of the [SimPlEC](https://github.com/erc-fhv/SimPlEC/) framework and serves as the simulation environment used in our research on model predictive control (MPC) for residential battery systems.
 
-## Related Paper and Citation
+# Related Paper and Citation
 
 More information about the simulation models and the underlying framework can be found in our paper (currently available on arXiv):
 
@@ -22,7 +21,7 @@ If you use this repository in your research, or find it useful, please cite:
 }
 ```
 
-## Getting Started
+# Getting Started
 
 ### Prerequisites
 
@@ -48,7 +47,7 @@ Activate your virtual python 3.11 environment and then install:
 pip install -e .
 ```
 
-## Running the Simulation
+### Running the Simulation
 
 Start the home BESS co-simulation with:
 
@@ -56,7 +55,7 @@ Start the home BESS co-simulation with:
 python scenarios/home_bess_simulation.py
 ```
 
-## Reproducing the Paper Figures
+### Reproducing the Paper Figures
 
 To recreate the figures presented in the paper, activate the virtual environment and execute the notebook:
 
@@ -64,12 +63,12 @@ To recreate the figures presented in the paper, activate the virtual environment
 post/paper_plots.ipynb
 ```
 
-## License
+# License
 
 This project is licensed under the MIT License.
 See the [LICENSE](LICENSE) file for details.
 
-## Acknowledgments
+# Acknowledgments
 
 <a href="https://projekte.ffg.at/projekt/4597880">
   <img src="doc/FFG_Logo.png" alt="FFG Logo" width="180" align="right">
