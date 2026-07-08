@@ -1,51 +1,83 @@
-# FlECs-Framework
+# Home BESS Simulation with the SimPlEC Framework
 
-This Framework can be used to simulate and assess different control strategies for flexibilities in energy systems in particular energy communities. It is written in python.
-The underlying framework for the cosimulation is [SimPlEC](https://github.com/erc-fhv/SimPlEC/).
+## Overview
 
-# Overview
-The following figure shows the structure of the framework based on some example models and scenarios.
-![Overview](doc/Overview.svg?raw=true "Overview")
+This repository contains the code for the co-simulation of a residential energy system consisting of a battery energy storage system (BESS) and a photovoltaic (PV) system. The simulation is built on top of the [SimPlEC](https://github.com/erc-fhv/SimPlEC/) framework and serves as the simulation environment used in our research on model predictive control (MPC) for residential battery systems.
 
-# Getting startet
-- create a venv with python 3.13
-- install the requirements.txt
-- execute one of the scenarios from the scenario directory
+## Related Paper and Citation
 
-# File Structure
+More information about the simulation models and the underlying framework can be found in our paper (currently available on arXiv):
 
-```
-FlECs-Framework\
-├── data (data for the models)\
-├── doc (supplementary documentation of the framework)\
-├── models (model directory)\
-│   └── foo (a model directory)\
-│       ├── foo.py (model logic)\
-│       ├── foo_params.txt (parameter files of model foo, if required)\
-│       ├── README.md (documentation of the model, optional)\
-│       └── test_foo.py (pytests / unittests of the model, reccomended)\
-├── output (output of the simulation)\
-├── post (postprocessing and analysis)\
-├── prep (preprocessing of data)\
-├── scenarios (scenario directory)\
-│   ├── scenario_bar.py\
-│   └── scenario_baz.py\
-└── util (utility files)\
+> https://arxiv.org/abs/XXXX
+
+If you use this repository in your research, or find it useful, please cite:
+
+```bibtex
+@article{moosbrugger2026real,
+  title={Real-World Model Predictive Control for Home Battery Systems: Towards Closing the Simulation-to-Reality Gap},
+  author={Moosbrugger, Lukas and Seiler, Valentin and Wohlgenannt, Philipp and Ristov, Sashko and Kepplinger, Peter},
+  journal={arXiv preprint},
+  year={2026},
+  doi={10.48550/arXiv.XXX}
+}
 ```
 
-# Naming Convention
-All variable representing physical properties should be called with a physical, LaTex like, style. For example: P_el, E_bes, Q_dot_hp, ...
-Other variables should be named descriptive according to python guidelines.
-Model Classes should be named in camel case, instances can have the same name but lowercase. For Example
-building = Building(...). Avoid appending 'Model' to the name.
+## Getting Started
 
-# Unit Convention
-All physical units which are passed in between models should be in their base SI unit with the exception of temperatures, which should be in °C. If this is for some reason impractical, the unit should be appended to the name such as P_el_in_kW or v_in_km_per_h.
+### Prerequisites
 
-# Sign Convention
-All consumption from the grid (heat network, ... ) as seen form a component is positive (egoistic sign convention)...
+The following software must be installed:
 
-# Git
-Git LFS is used to track changes in the data/ folder, so it needs to be configured. See the docs https://git-lfs.com/
-On Windows, git lfs should come with the standard git installation, on linux it can be installed via package manager (e.g. apt).
+- Git
+- Git LFS
+- Python 3.11
+- A Python virtual environment (e.g. `venv`)
 
+### Clone the Repository
+
+```bash
+git clone https://github.com/erc-fhv/home_bess_with_simplec.git
+cd home_bess_with_simplec
+```
+
+### Install the Dependencies
+
+Activate your virtual python 3.11 environment and then install:
+
+```bash
+pip install -e .
+```
+
+## Running the Simulation
+
+Start the home BESS co-simulation with:
+
+```bash
+python scenarios/home_bess_simulation.py
+```
+
+## Reproducing the Paper Figures
+
+To recreate the figures presented in the paper, activate the virtual environment and execute the notebook:
+
+```
+post/paper_plots.ipynb
+```
+
+## License
+
+This project is licensed under the MIT License.
+See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+<a href="https://projekte.ffg.at/projekt/4597880">
+  <img src="FFG_Logo.png" alt="FFG Logo" width="180" align="right">
+</a>
+
+This work was supported by the **Austrian Research Promotion Agency (FFG)** through the **Hub4FlECs** project (COIN FFG 898053).
+
+We gratefully acknowledge the financial support provided by the FFG, which enabled the development of the software contained in this repository.
+
+Project page:
+https://projekte.ffg.at/projekt/4597880
