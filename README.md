@@ -72,7 +72,7 @@ See the [LICENSE](LICENSE) file for details.
 ## Acknowledgments
 
 <a href="https://projekte.ffg.at/projekt/4597880">
-  <img src="FFG_Logo.png" alt="FFG Logo" width="180" align="right">
+  <img src="doc/FFG_Logo.png" alt="FFG Logo" width="180" align="right">
 </a>
 
 This work was supported by the **Austrian Research Promotion Agency (FFG)** through the **Hub4FlECs** project (COIN FFG 898053).
