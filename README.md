@@ -5,7 +5,7 @@ This repository contains the code for the co-simulation of a residential energy 
 
 # Related Paper and Citation
 
-More information about the simulation models and the underlying framework can be found in our paper (currently available on arXiv):
+More information about the simulation models and the underlying framework can be found in our paper (soon available on arXiv):
 
 > https://arxiv.org/abs/XXXX
 
