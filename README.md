@@ -7,7 +7,7 @@ This repository contains the code for the co-simulation of a residential energy 
 
 More information about the simulation models and the underlying framework can be found in our paper:
 
-> [energy.acm.org/eir/real-world-model-predictive-control-for-home-battery-systems-towards-closing-the-simulation-to-reality-gap](https://energy.acm.org/eir/real-world-model-predictive-control-for-home-battery-systems-towards-closing-the-simulation-to-reality-gap/)
+> [Real-World Model Predictive Control for Home Battery Systems: Towards Closing the Simulation-to-Reality Gap](https://dl.acm.org/doi/10.1145/3861130.3861140)
 
 If you use this repository in your research, please cite:
 
